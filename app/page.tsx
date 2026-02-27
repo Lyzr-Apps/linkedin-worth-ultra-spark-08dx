@@ -12,7 +12,7 @@ import { Label } from '@/components/ui/label'
 import { ScrollArea } from '@/components/ui/scroll-area'
 import { Skeleton } from '@/components/ui/skeleton'
 import { Separator } from '@/components/ui/separator'
-import { Collapsible, CollapsibleTrigger, CollapsibleContent } from '@/components/ui/collapsible'
+// Collapsible removed - using inline expand/collapse instead
 import {
   FiSearch,
   FiCheck,
@@ -459,33 +459,35 @@ function FactorBar({
 }) {
   const [open, setOpen] = useState(false)
   return (
-    <Collapsible open={open} onOpenChange={setOpen}>
-      <CollapsibleTrigger asChild>
-        <button className="w-full text-left group" type="button">
-          <div className="flex items-center gap-3 mb-1.5">
-            <Icon className="w-4 h-4 text-muted-foreground flex-shrink-0" />
-            <span className="text-xs uppercase tracking-[0.1em] text-foreground font-light flex-1">{label}</span>
-            <span className="text-xs text-muted-foreground font-light tabular-nums">{weight}%</span>
-            {open ? (
-              <FiChevronUp className="w-3.5 h-3.5 text-muted-foreground" />
-            ) : (
-              <FiChevronDown className="w-3.5 h-3.5 text-muted-foreground" />
-            )}
-          </div>
-          <div className="w-full h-1.5 bg-secondary overflow-hidden">
-            <div
-              className={'h-full transition-all duration-500 ' + colorClass}
-              style={{ width: Math.min(weight, 100) + '%' }}
-            />
-          </div>
-        </button>
-      </CollapsibleTrigger>
-      <CollapsibleContent>
+    <div>
+      <button
+        className="w-full text-left group"
+        type="button"
+        onClick={function () { setOpen(function (prev) { return !prev }) }}
+      >
+        <div className="flex items-center gap-3 mb-1.5">
+          <Icon className="w-4 h-4 text-muted-foreground flex-shrink-0" />
+          <span className="text-xs uppercase tracking-[0.1em] text-foreground font-light flex-1">{label}</span>
+          <span className="text-xs text-muted-foreground font-light tabular-nums">{weight}%</span>
+          {open ? (
+            <FiChevronUp className="w-3.5 h-3.5 text-muted-foreground" />
+          ) : (
+            <FiChevronDown className="w-3.5 h-3.5 text-muted-foreground" />
+          )}
+        </div>
+        <div className="w-full h-1.5 bg-secondary overflow-hidden">
+          <div
+            className={'h-full transition-all duration-500 ' + colorClass}
+            style={{ width: Math.min(weight, 100) + '%' }}
+          />
+        </div>
+      </button>
+      {open ? (
         <div className="mt-2 pl-7 pr-4 pb-2">
           <p className="text-xs text-muted-foreground leading-relaxed font-light">{detail}</p>
         </div>
-      </CollapsibleContent>
-    </Collapsible>
+      ) : null}
+    </div>
   )
 }
 
