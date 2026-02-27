@@ -12,7 +12,6 @@ import { Label } from '@/components/ui/label'
 import { ScrollArea } from '@/components/ui/scroll-area'
 import { Skeleton } from '@/components/ui/skeleton'
 import { Separator } from '@/components/ui/separator'
-// Collapsible removed - using inline expand/collapse instead
 import {
   FiSearch,
   FiCheck,
