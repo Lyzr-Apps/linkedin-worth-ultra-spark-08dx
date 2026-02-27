@@ -1,0 +1,56 @@
+{
+  "nodes": [
+    {
+      "id": "input_node",
+      "type": "Input",
+      "label": "LinkedIn Profile URL",
+      "nodeCategory": "input"
+    },
+    {
+      "id": "manager_agent",
+      "type": "Agent",
+      "label": "Estimation Coordinator",
+      "nodeCategory": "agent"
+    },
+    {
+      "id": "sub_agent_1",
+      "type": "Agent",
+      "label": "Profile Research Agent",
+      "nodeCategory": "agent"
+    },
+    {
+      "id": "sub_agent_2",
+      "type": "Agent",
+      "label": "Net Worth Analyst Agent",
+      "nodeCategory": "agent"
+    },
+    {
+      "id": "output_node",
+      "type": "Output",
+      "label": "Estimation Result",
+      "nodeCategory": "end"
+    }
+  ],
+  "edges": [
+    {
+      "source": "input_node",
+      "target": "manager_agent"
+    },
+    {
+      "source": "manager_agent",
+      "target": "sub_agent_1"
+    },
+    {
+      "source": "manager_agent",
+      "target": "sub_agent_2"
+    },
+    {
+      "source": "sub_agent_1",
+      "target": "output_node"
+    },
+    {
+      "source": "sub_agent_2",
+      "target": "output_node"
+    }
+  ]
+}

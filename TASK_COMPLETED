@@ -1,0 +1,20 @@
+UI generation complete for NetWorth Estimator app.
+
+Files written:
+1. /app/nextjs-project/app/globals.css - Luxury Minimal theme with champagne gold primary, warm neutrals, 0rem border radius
+2. /app/nextjs-project/app/page.tsx - Complete NetWorth Estimator single-page app
+
+Features implemented:
+- Header with app branding and Sample Data toggle
+- LinkedIn URL input with validation (green check / red X indicators)
+- Estimation via callAIAgent with robust JSON response parsing
+- Loading state with skeleton loader and step-based progress text
+- Full estimation results display: net worth range, percentile badge, confidence indicator
+- Factor breakdown panel with 6 weighted bars (expandable for detail text)
+- Analysis summary, methodology, and key assumptions sections with markdown rendering
+- Collapsible sidebar with estimation history (localStorage persistence)
+- History search/filter, delete, and select-to-view functionality
+- Empty state for first-time users
+- Error state with retry capability
+- Agent status indicator footer
+- 100% field coverage from response_schemas

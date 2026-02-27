@@ -1,0 +1,25 @@
+{
+  "agent_name": "Profile Research Agent",
+  "agent_id": "69a143924e0495b1eb150068",
+  "agent_type": "json",
+  "accessor": "json",
+  "has_module_outputs": false,
+  "response_schema": {
+    "profile_name": "string",
+    "current_title": "string",
+    "current_company": "string",
+    "industry": "string",
+    "location": "string",
+    "education": "string",
+    "years_experience": "number",
+    "estimated_network_size": "string",
+    "salary_range_low": "number",
+    "salary_range_high": "number",
+    "career_highlights": "string",
+    "compensation_benchmarks": "string",
+    "equity_likelihood": "string",
+    "financial_signals": "string",
+    "confidence_level": "string",
+    "research_summary": "string"
+  }
+}

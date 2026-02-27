@@ -1,0 +1,26 @@
+{
+  "agents": {
+    "estimation_coordinator": {
+      "agent_id": "69a143a9356416effea7c01c",
+      "type": "manager",
+      "model": "gpt-4.1",
+      "provider": "openai",
+      "managed_agents": [
+        "69a143924e0495b1eb150068",
+        "69a143924e0495b1eb15006a"
+      ]
+    },
+    "profile_research_agent": {
+      "agent_id": "69a143924e0495b1eb150068",
+      "type": "sub-agent",
+      "model": "sonar-pro",
+      "provider": "perplexity"
+    },
+    "net_worth_analyst_agent": {
+      "agent_id": "69a143924e0495b1eb15006a",
+      "type": "sub-agent",
+      "model": "gpt-4.1",
+      "provider": "openai"
+    }
+  }
+}
