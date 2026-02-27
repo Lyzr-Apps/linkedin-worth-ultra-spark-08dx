@@ -18,7 +18,7 @@ import {
   FiX,
   FiLoader,
   FiBriefcase,
-  FiBuilding,
+  FiGrid,
   FiClock,
   FiAward,
   FiMapPin,
@@ -357,7 +357,7 @@ const FACTOR_CONFIG: Array<{
   color: string
 }> = [
   { key: 'job_title', label: 'Job Title & Seniority', icon: FiBriefcase, color: 'bg-amber-700' },
-  { key: 'company', label: 'Company & Compensation', icon: FiBuilding, color: 'bg-amber-800' },
+  { key: 'company', label: 'Company & Compensation', icon: FiGrid, color: 'bg-amber-800' },
   { key: 'work_history', label: 'Work History & Tenure', icon: FiClock, color: 'bg-stone-600' },
   { key: 'education', label: 'Education & Credentials', icon: FiAward, color: 'bg-stone-500' },
   { key: 'industry_location', label: 'Industry & Location', icon: FiMapPin, color: 'bg-amber-600' },
